@@ -9,14 +9,12 @@ import {reactReduxFirebaseConfig} from "./configs";
 import Store from './redux/store'
 import configureLocales from './resources/locales'
 
+configureLocales()
 initializeFirebase()
 
 const store = Store()
 
 export default () => {
-
-    configureLocales()
-
     return (
         <Provider store={store}>
             <ReactReduxFirebaseProvider
