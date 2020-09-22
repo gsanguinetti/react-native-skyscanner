@@ -1,8 +1,4 @@
 import React from 'react';
-import {RootNavigation} from './src/navigation/RootNavigation'
+import AppContainer from './src'
 
-export default () => {
-    return (
-        <RootNavigation/>
-    );
-}
+export default () => <AppContainer/>
