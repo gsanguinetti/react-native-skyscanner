@@ -1,4 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {View} from 'react-native';
+import {Container, Content} from "native-base";
+import { Text } from 'react-native'
 
-export default () => (<View><Text>Login</Text></View>)
+export default function Login() {
+    return (
+        <Container>
+            <Content>
+                <Text>Login</Text>
+            </Content>
+        </Container>
+    );
+}
