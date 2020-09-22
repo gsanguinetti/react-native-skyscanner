@@ -7,12 +7,16 @@ import {RootNavigation} from './navigation/RootNavigation'
 import initializeFirebase from "./initializeFirebase";
 import {reactReduxFirebaseConfig} from "./configs";
 import Store from './redux/store'
+import configureLocales from './resources/locales'
 
 initializeFirebase()
 
 const store = Store()
 
 export default () => {
+
+    configureLocales()
+
     return (
         <Provider store={store}>
             <ReactReduxFirebaseProvider

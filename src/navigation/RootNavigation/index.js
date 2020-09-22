@@ -1,6 +1,6 @@
 import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
 import LoginScreen from '../../screens/LoginScreen'
 import HomeScreen from '../../screens/HomeScreen'
@@ -17,14 +17,20 @@ export const PROFILE_SCREEN = 'ProfileScreen';
 export const RESULTS_SCREEN = 'ResultsScreen';
 
 export const RootNavigation = () => {
-    return(
+    return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name={LOADING_SCREEN} component={LoadingScreen} />
-                <Stack.Screen name={LOGIN_SCREEN} component={LoginScreen} />
-                <Stack.Screen name={HOME_SCREEN} component={HomeScreen} />
-                <Stack.Screen name={PROFILE_SCREEN} component={ProfileScreen} />
-                <Stack.Screen name={RESULTS_SCREEN} component={ResultsScreen} />
+                <Stack.Screen name={LOADING_SCREEN} component={LoadingScreen}/>
+
+                <Stack.Screen name={LOGIN_SCREEN} component={LoginScreen} options={{
+                    headerShown: false
+                }}/>
+
+                <Stack.Screen name={HOME_SCREEN} component={HomeScreen}/>
+
+                <Stack.Screen name={PROFILE_SCREEN} component={ProfileScreen}/>
+
+                <Stack.Screen name={RESULTS_SCREEN} component={ResultsScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
